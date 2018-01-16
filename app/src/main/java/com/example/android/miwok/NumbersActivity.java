@@ -3,8 +3,8 @@ package com.example.android.miwok;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -17,9 +17,6 @@ Context context;
         ArrayList<String> words=new ArrayList<String>();
 
        // LinearLayout rootView= (LinearLayout) findViewById(R.id.rootView);
-
-
-                words.add("one");
 words.add("two");
 words.add("three");
 words.add("four");
@@ -30,18 +27,14 @@ words.add("eight");
 words.add("nine");
 words.add("ten");
 
-        LinearLayout rootView= (LinearLayout) findViewById(R.id.rootView);
+     //   LinearLayout rootView= (LinearLayout) findViewById(R.id.rootView);
 
 
-for (int index=0; index<words.size();index++){
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
 
-    TextView wordView=new TextView(context);
-    wordView.setText(words.get(index));
+        ListView listView = (ListView) findViewById(R.id.list);
 
-    // Add this TextView as another child to the root view of this layout
-    rootView.addView(wordView);
-
-}
+        listView.setAdapter(itemsAdapter);
 
     }
 }
