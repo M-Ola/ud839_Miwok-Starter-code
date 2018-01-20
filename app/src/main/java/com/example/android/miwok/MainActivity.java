@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 numbers.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+        Intent numbersIntent = new Intent(MainActivity.this, ColorsActivity.class);
     startActivity(numbersIntent);
     }
 });
@@ -53,7 +53,7 @@ numbers.setOnClickListener(new View.OnClickListener() {
         colors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent numbersIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
                 startActivity(numbersIntent);
             }
         });
